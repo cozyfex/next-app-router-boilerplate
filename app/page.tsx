@@ -1,8 +1,8 @@
 "use client";
 
 import { ChangeEvent, useState } from "react";
-import UserSampleInterface from "@/interfaces/userSampleInterface";
-import zStore from "@/stores";
+import UserSampleInterface from "@interfaces/userSampleInterface";
+import zStore from "@stores";
 
 export default function Home() {
   const username = zStore.use.username();
