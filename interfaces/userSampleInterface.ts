@@ -1,4 +1,4 @@
 export default interface UserSampleInterface {
-  username: string;
-  nickname: string;
+  username: string
+  nickname: string
 }

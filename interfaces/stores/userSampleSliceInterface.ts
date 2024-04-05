@@ -1,6 +1,6 @@
-import UserSampleInterface from "@/interfaces/userSampleInterface";
+import UserSampleInterface from '@/interfaces/userSampleInterface'
 
 export default interface UserSampleSliceInterface extends UserSampleInterface {
-  setUsername: (username: string) => void;
-  setNickname: (nickname: string) => void;
+  setUsername: (username: string) => void
+  setNickname: (nickname: string) => void
 }
