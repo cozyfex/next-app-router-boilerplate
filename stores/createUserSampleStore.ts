@@ -1,4 +1,5 @@
 import { StateCreator } from 'zustand'
+
 import UserSampleSliceInterface from '@interfaces/stores/userSampleSliceInterface'
 
 const createUserSampleSlice: StateCreator<UserSampleSliceInterface> = (
