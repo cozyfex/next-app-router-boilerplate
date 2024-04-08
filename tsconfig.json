@@ -25,23 +25,14 @@
       "@/*": [
         "./*"
       ],
-      "@components/*": [
-        "./components/*"
-      ],
       "@constants/*": [
         "./constants/*"
       ],
-      "@hooks/*": [
-        "./hooks/*"
+      "@types/*": [
+        "./types/*"
       ],
       "@interfaces/*": [
         "./interfaces/*"
-      ],
-      "@middlewares/*": [
-        "./middlewares/*"
-      ],
-      "@services/*": [
-        "./services/*"
       ],
       "@stores": [
         "./stores/index.ts"
@@ -49,14 +40,23 @@
       "@stores/*": [
         "./stores/*"
       ],
-      "@styles/*": [
-        "./styles/*"
+      "@services/*": [
+        "./services/*"
       ],
-      "@types/*": [
-        "./types/*"
+      "@middlewares/*": [
+        "./middlewares/*"
+      ],
+      "@hooks/*": [
+        "./hooks/*"
+      ],
+      "@components/*": [
+        "./components/*"
       ],
       "@utils/*": [
         "./utils/*"
+      ],
+      "@styles/*": [
+        "./styles/*"
       ]
     }
   },

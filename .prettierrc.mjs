@@ -4,27 +4,6 @@ const prettierConfig = {
   semi: false,
   singleQuote: true,
   printWidth: 80,
-  importOrder: [
-    '^react(.*)$',
-    '^next(.*)$',
-    '<THIRD_PARTY_MODULES>',
-    '^@constants/(.*)$',
-    '^@types/(.*)$',
-    '^@interfaces/(.*)$',
-    '^@middlewares/(.*)$',
-    '^@services/(.*)$',
-    '^@hooks/(.*)$',
-    '^@stores$',
-    '^@stores/(.*)$',
-    '^@components/(.*)$',
-    '^@utils/(.*)$',
-    '^@styles/(.*)$',
-    '^@assets/(.*)$',
-    '^[./]'],
-  importOrderSeparation: true,
-  importOrderSortSpecifiers: true,
-  importOrderGroupNamespaceSpecifiers: true,
-  plugins: ['@trivago/prettier-plugin-sort-imports'],
 };
 
 export default prettierConfig;
