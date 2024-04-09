@@ -3,6 +3,8 @@
 ## Getting Started
 
 ```bash
+mv next-env-sample.d.ts next-env.d.ts
+
 pnpm install
 pnpm dev
 ```
