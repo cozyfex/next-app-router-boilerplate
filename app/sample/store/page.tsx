@@ -38,6 +38,7 @@ const SampleStorePage = () => {
           <input
             id="username"
             type="text"
+            className="text-black"
             value={user.username}
             onChange={handleUsername}
           />
@@ -49,6 +50,7 @@ const SampleStorePage = () => {
           <input
             id="nickname"
             type="text"
+            className="text-black"
             value={user.nickname}
             onChange={handleNickname}
           />
