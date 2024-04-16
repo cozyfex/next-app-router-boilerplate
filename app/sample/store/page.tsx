@@ -12,12 +12,12 @@ const SampleStorePage = () => {
   const { title, author, setTitle, setAuthor } = zStore.sampleBook.z()
 
   const [user, setUser] = useState<UserSampleInterface>({
-    username: '',
-    nickname: '',
+    username,
+    nickname,
   })
   const [book, setBook] = useState<BookSampleInterface>({
-    author: '',
-    title: '',
+    author,
+    title,
   })
 
   const handleUsername = (event: ChangeEvent<HTMLInputElement>) => {

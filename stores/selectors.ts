@@ -15,22 +15,23 @@ export const createSelectors = <S extends UseBoundStore<StoreApi<State>>>(
 ) => {
   const store = _store as WithSelectors<typeof _store>
 
+  /* eslint-disable @typescript-eslint/no-explicit-any */
+
   store.use = {}
   for (const k of Object.keys(store.getState())) {
-    // eslint-disable-next-line
     ;(store.use as any)[k] = () => store((s) => s[k as keyof typeof s])
   }
 
   store.z = () => {
-    // eslint-disable-next-line
     const z: any = {}
     for (const k of Object.keys(store.getState())) {
-      // eslint-disable-next-line
       z[k] = (store.use as any)[k]()
     }
 
     return z
   }
+
+  /* eslint-enable @typescript-eslint/no-explicit-any */
 
   return store
 }
