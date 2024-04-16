@@ -9,14 +9,6 @@ type WithSelectors<S> = S extends { getState: () => infer T }
     }
   : never
 
-export const zSelector = <T extends object>(slice: StateCreator<T>) => {
-  return createSelectors(
-    create<T>()((...a) => ({
-      ...slice(...a),
-    })),
-  )
-}
-
 export const createSelectors = <S extends UseBoundStore<StoreApi<State>>>(
   _store: S,
 ) => {
@@ -37,4 +29,12 @@ export const createSelectors = <S extends UseBoundStore<StoreApi<State>>>(
   }
 
   return store
+}
+
+export const zSelector = <T extends object>(slice: StateCreator<T>) => {
+  return createSelectors(
+    create<T>()((...a) => ({
+      ...slice(...a),
+    })),
+  )
 }
