@@ -7,10 +7,7 @@ import UserSampleInterface from '@interfaces/userSampleInterface'
 import zStore from '@stores'
 
 const SampleStorePage = () => {
-  const username = zStore.use.username()
-  const nickname = zStore.use.nickname()
-  const setUsername = zStore.use.setUsername()
-  const setNickname = zStore.use.setNickname()
+  const { username, nickname, setUsername, setNickname } = zStore.sampleUser.z()
 
   const [user, setUser] = useState<UserSampleInterface>({
     username: '',
