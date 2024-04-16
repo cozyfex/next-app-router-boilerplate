@@ -1,6 +1,6 @@
 'use client'
 
-import { ChangeEvent, useState } from 'react'
+import { ChangeEvent, useEffect, useState } from 'react'
 
 import BookSampleInterface from '@interfaces/bookSampleInterface'
 import UserSampleInterface from '@interfaces/userSampleInterface'
@@ -42,6 +42,14 @@ const SampleStorePage = () => {
     setTitle(book.title)
     setAuthor(book.author)
   }
+
+  useEffect(() => {
+    setUser({ username, nickname })
+  }, [username, nickname])
+
+  useEffect(() => {
+    setBook({ title, author })
+  }, [title, author])
 
   return (
     <main>
