@@ -1,3 +1,3 @@
 # Component Directory
 
-This directory is for global components.
+This directory is for global reusable component.
