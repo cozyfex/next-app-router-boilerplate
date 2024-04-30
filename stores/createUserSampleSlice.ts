@@ -7,8 +7,8 @@ const createUserSampleSlice: StateCreator<UserSampleSliceInterface> = (
 ) => ({
   username: '',
   nickname: '',
-  setUsername: (username) => set((state) => ({ username })),
-  setNickname: (nickname) => set((state) => ({ nickname })),
+  setUsername: (username) => set(() => ({ username })),
+  setNickname: (nickname) => set(() => ({ nickname })),
 })
 
 export default createUserSampleSlice

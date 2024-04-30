@@ -1,19 +1,19 @@
 import { create, StateCreator, StoreApi, UseBoundStore } from 'zustand'
 import { createJSONStorage, persist } from 'zustand/middleware'
 
-type State = object
+type StateType = object
 
-type WithSelectors<S> = S extends { getState: () => infer T }
+type WithSelectorType<S> = S extends { getState: () => infer T }
   ? S & {
       use: { [K in keyof T]: () => T[K] }
       z: () => T
     }
   : never
 
-export const createSelectors = <S extends UseBoundStore<StoreApi<State>>>(
+export const createSelectors = <S extends UseBoundStore<StoreApi<StateType>>>(
   _store: S,
 ) => {
-  const store = _store as WithSelectors<typeof _store>
+  const store = _store as WithSelectorType<typeof _store>
 
   /* eslint-disable @typescript-eslint/no-explicit-any */
 

@@ -1,6 +1,6 @@
-import { ComponentProps, ReactNode } from 'react'
-
 import { cva } from 'class-variance-authority'
+
+import { ComponentProps, ReactNode } from 'react'
 
 import { cn } from '@utils/css'
 
